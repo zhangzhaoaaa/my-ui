@@ -1,0 +1,341 @@
+
+.dialogMessage{
+  .form-group .form-input .input-text{
+    width:450px;
+  }
+  .picker-label{
+    position: relative;
+    top:20px;
+  }
+  .shadeBox{
+    z-index:100;
+    background:#000000;
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    opacity: 0.3;
+  }
+  .dialogBox{
+    overflow: hidden;
+    z-index:110;
+    background:#fff;
+    position: fixed;
+
+    top:50%;
+    left:50%;
+    border-radius: 5px;
+    box-shadow: #3b3b1f;
+    transform: translate(-50%, -50%);
+    .messageHeader{
+      position: relative;
+      min-height: 40px;
+      p{
+        //height:70px;
+        margin: 0 40px;
+        text-align: center;
+        line-height:70px;
+        font-size:22px;
+        border-bottom: 1px solid $border;
+      }
+      em{
+        position: absolute;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        height:20px;
+        width:20px;
+        right:15px;
+        top:15px;
+      }
+    }
+
+    .messageContain{
+      margin:0px 40px 20px 40px;
+      overflow-y:auto;
+      overflow-x:hidden;
+      position: relative;
+      //width:590px;
+      //height:280px;
+
+      ul.videoList{
+        margin-right: -30px;
+        padding-top:10px;
+        li.double-left:first-child{
+          margin-left: 18%;
+        }
+        li.only{
+          margin-left:18%;
+          width:590px;
+          height:240px;
+          .video-img ,.video-img img{
+            width:370px;
+            height:210px;
+          }
+          .video-title{
+            width: 370px;
+          }
+          &:hover{
+            .hoverStyle{
+              width:370px;
+              height:210px;
+            }
+          }
+        }
+
+        li{
+          margin-top: 10px;
+          margin-right: 30px;
+          position: relative;
+          .video-title{
+            cursor: pointer;
+            height:30px;
+            line-height:30px;
+            width:170px;
+            @include ellipsis(1);
+          }
+          .video-img{
+            position: relative;
+            height:96px;
+            cursor: pointer;
+            span{
+              position: absolute;
+              right:0;
+              bottom: 0;
+              height:30px;
+              width:30px;
+            }
+          }
+
+          &:hover{
+            .hoverStyle{
+              position: absolute;
+              height:96px;
+              width:170px;
+              top:0;
+              left:0;
+              background: #fff;
+              opacity: 0.5;
+            }
+          }
+        }
+
+        li.active{
+          span{
+            background: url("../../../imgs/public/video-chosed.png");
+          }
+        }
+        li.markedWorld{
+          height:250px;
+          div{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+            font-size: 20px;
+            color:$gray;
+          }
+
+        }
+      }
+      //ul.subList{
+      //  li{
+      //    height:50px;
+      //    padding-left:10px;
+      //    line-height:50px;
+      //    cursor: default;
+      //    em{
+      //      display: inline-block;
+      //      width:20px;
+      //      height:20px;
+      //      background: url("../../../imgs/public/sub-list.png");
+      //      position: relative;
+      //      top:5px;
+      //      margin-right:10px;
+      //    }
+      //    &:hover{
+      //      background: $border;
+      //    }
+      //  }
+      //  li.active{
+      //    em{
+      //      background: url("../../../imgs/public/sub-chosed.png");
+      //    }
+      //  }
+      //}
+      /* 封面图选择按钮 */
+      .picker-wrap{
+        position: relative;
+        float: left;
+        .webuploader-element-invisible{
+          opacity: 0;
+          position: absolute;
+        }
+      }
+      .cover-picker{
+        width: 80px;
+        height: 80px;
+        border: 1px solid $border;
+        border-radius: 3px;
+        &:before{
+          content: '';
+          width: 28px;
+          height: 2px;
+          position: absolute;
+          top: 39px;
+          left: 26px;
+          background-color: $gray;
+        }
+        &:after{
+          content: "";
+          width: 2px;
+          height: 28px;
+          position: absolute;
+          left: 39px;
+          top: 26px;
+          background-color: $gray;
+        }
+      }
+      .remark{
+        float: left;
+        padding-top: 38px;
+        padding-left: 10px;
+        font-size: 12px;
+        color: $gray;
+      }
+      .picker-box{
+        padding-bottom: 0;
+        .thumb{
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          z-index: 1;
+          img{
+            width: 80px;
+            height:80px;
+          }
+          .del{
+            border: 0;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #f55050;
+            position: absolute;
+            background: #fff;
+            right: -9px;
+            top: -9px;
+            cursor: pointer;
+            z-index: 10;
+          }
+          .indicator{
+            font-size: 30px;
+            position: absolute;
+            top: 25.5px;
+            left:22px;
+          }
+        }
+      }
+      .picker-error{
+        clear: both;
+        padding-top: 8px;
+      }
+      .deleteContainer{
+        text-align: center;
+        font-size: 16px;
+        height:30px;
+
+      }
+      .addNewDialog{
+        padding: 20px 0 0px 0px;
+        overflow:hidden;
+      }
+
+  }
+    .defaultFooter .btn.unClick,.submitFooter .btn.unClick{
+      background: #ccc;
+    }
+    .defaultFooter .btn.okBtn.unClick:hover,.submitFooter .btn.unClick:hover{
+      background: #ccc;
+    }
+    .defaultFooter .btn.okBtn:hover,.submitFooter .btn:hover{
+      background: #75b8f9;
+    }
+  .defaultFooter{
+    //取消按钮，提交按钮
+    text-align: center;
+    margin-bottom:30px;
+    span{
+      height: 40px;
+      line-height: 40px;
+    }
+    .okBtn{
+      padding: 0 64px;
+      margin-right: 40px;
+    }
+    .offBtn{
+      padding: 0 64px;
+      background: #fff;
+      color:$primary;
+      border:1px solid $primary;
+    }
+  }
+
+    .deletFooter{
+      span{
+        height: 40px;
+        line-height: 40px;
+      }
+      text-align: center;
+      border-top:1px solid $border;
+
+      .btn{
+        background: #fff;
+        border: transparent;
+        color:#111;
+        border-radius: 0;
+        padding: 0 48px;
+        &:hover{
+          color:$primary;
+        }
+      }
+      .okBtn{
+        border-right:1px solid $border;
+      }
+
+    }
+    .submitFooter{
+      text-align: center;
+      margin-bottom: 35px;
+      .btn{
+        padding:0 70px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+}
+
+
+}
+
+.video-Center-Container.is-Table {
+  display: table;
+  width:100%;
+  height:100%;
+
+  .Table-Cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .Center-Block {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    p{
+      line-height:70px;
+      font-size:18px;
+    }
+    .btn{padding:0 96px;}
+  }
+}
