@@ -30,7 +30,6 @@ let webpackConfig = {
 	},
 	module: {
         // |vendor\/webuploader\.html5only\.js
-        noParse: /jquery/,
 		rules: [
             {
                 test: /\.scss$/,
@@ -79,9 +78,6 @@ let webpackConfig = {
                 include: [
                     paths.js,
                     path.join(paths.base, 'node_modules/fv-dialog/src/')
-                ],
-                exclude: [
-                    path.join(paths.js, 'vendor', 'webuploader.html5only.js')
                 ]
             }]
 	},
@@ -90,11 +86,6 @@ let webpackConfig = {
 			name: 'vendor',
 			filename: 'js/vendor.js',
 			minChunks: Infinity
-		}),
-		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery',
-            "window.jQuery": "jquery"
 		})
 	]
 };
