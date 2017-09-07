@@ -1,2 +1,29 @@
 /* notification */
 @import "../../base/public.scss";
+
+.my-ui-notification-wrap {
+  display: none;
+}
+.my-ui-notification {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  box-shadow: 2px 2px 35px 0px rgba(158, 158, 158, 0.41)
+}
+.ui-notification-mask {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 100;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
