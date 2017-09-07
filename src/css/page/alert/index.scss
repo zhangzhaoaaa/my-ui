@@ -1,0 +1,50 @@
+/* alert */
+@import "../../base/public.scss";
+
+.my-ui-alert {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 280px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  background-color: #fff;
+  box-shadow: 2px 2px 35px 0px rgba(158, 158, 158, 0.41)
+}
+.alert-body {
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 20px;
+}
+.alert-footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &:before {
+    content: '';
+    width: 100%;
+    border-top: 1px solid #dddbdb;
+    position: absolute;
+    top: 0;
+  }
+  .footer-btn {
+    width: 100px;
+    height: 30px;
+    align-self: center;
+    color: #fff;
+    background: #52acf3;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.ui-dialog-close {
+  right: 0;
+}
