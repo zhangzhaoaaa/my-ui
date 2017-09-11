@@ -5,6 +5,7 @@ import DialogApp from 'page/dialog/index';
 import NotificationApp from 'page/notification/index';
 import AlertApp from 'page/alert/index';
 import LoadingBoxApp from 'page/loadingbox/index';
+import ConfirmApp from 'page/confirm/index';
 let indexRoutes = [{
     path: '/uihome',
     component: UIHome,
@@ -25,6 +26,11 @@ let indexRoutes = [{
         path: '/loadingbox',
         component: LoadingBoxApp,
         navName: '加载'
+    }
+    , {
+        path: '/confirm',
+        component: ConfirmApp,
+        navName: '确认'
     }
 ];
 
