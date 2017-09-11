@@ -33,8 +33,8 @@ class Alert extends Component {
     }
     render() {
         return (
-            <div className="my-ui-notification-wrap" style={this.state.style}>
-                <div className="ui-notification-mask"></div>
+            <div className="my-ui-alert-wrap" style={this.state.style}>
+                <div className="ui-alert-mask"></div>
                 <div className="my-ui-alert">
                     <div><span className="ui-dialog-close" onClick={this.onClose}></span></div>
                     <div className="alert-body">
@@ -59,12 +59,12 @@ Alert.newInstance = function newAlertInstance(properties) {
         div = document.createElement('div');
         document.body.appendChild(div);
     }
-    const notification = ReactDOM.render(<Alert {...props} />, div);
+    const alert = ReactDOM.render(<Alert {...props} />, div);
     return {
-        notice(noticeProps) {
-            notification.add(noticeProps);
+        notice(alertProps) {
+            alert.add(alertProps);
         },
-        component: notification,
+        component: alert,
         destroy() {
             ReactDOM.unmountComponentAtNode(div);
             if (!getContainer) {

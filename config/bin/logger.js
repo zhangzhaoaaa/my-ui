@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-var prefix = '   GomePlus';
+var prefix = '   my-ui';
 var sep = chalk.gray('·');
 
 exports.log = function(msg) {

@@ -1,6 +1,17 @@
 /* alert */
 @import "../../base/public.scss";
 
+.ui-alert-mask {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 100;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
 .my-ui-alert {
   position: fixed;
   left: 50%;

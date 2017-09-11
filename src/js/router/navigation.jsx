@@ -4,7 +4,7 @@ import UIHome from 'page/uihome/index';
 import DialogApp from 'page/dialog/index';
 import NotificationApp from 'page/notification/index';
 import AlertApp from 'page/alert/index';
-
+import LoadingBoxApp from 'page/loadingbox/index';
 let indexRoutes = [{
     path: '/uihome',
     component: UIHome,
@@ -21,7 +21,12 @@ let indexRoutes = [{
     path: '/alert',
     component: AlertApp,
     navName: '警告'
-}];
+}, {
+        path: '/loadingbox',
+        component: LoadingBoxApp,
+        navName: '加载'
+    }
+];
 
 export  {
     indexRoutes
