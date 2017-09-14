@@ -1,8 +1,6 @@
 /* css */
-import 'css/page/alert/index.scss';
-
 import React, {Component} from 'react';
-import Alert from './alert';
+import Alert from 'components/Alert';
 
 let alert  = Alert.newInstance({});
 

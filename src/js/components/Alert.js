@@ -1,61 +1,78 @@
 /**
  *
- Created by zhangzhao on 2017/7/24.
+ Created by zhangzhao on 2017/9/7.
  Email: zhangzhao@gomeplus.com
-
- 用法：
-     参数：
-         1. visible: true/false，true是显示弹出框，false是隐藏弹出框
-         2. msg: 弹出框说明
-         3. onClose:  右上角关闭按钮
  */
+import 'css/components/alert.scss';
 import React, {Component} from 'react';
-import Dialog from 'fv-dialog';
-import 'css/components/dialog.scss';
+import ReactDOM from 'react-dom';
+
 class Alert extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            visible: this.props.visible,
+        this.state={
+            notices: '',
             style: {
-                width: 290,
-                height: 180
+                display: 'none'
             }
         }
     }
-    onClose = () => {
+    add = (notice) => {
         this.setState({
-            visible: false
-        }, function(){
-            let onClose = this.props.onClose;
-            onClose && onClose();
-        })
-    }
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            visible: nextProps.visible
+            notices: notice.content,
+            style:{
+                display: 'block'
+            }
         });
     }
+    onClose=()=>{
+        this.setState({
+            style:{
+                display: 'none'
+            }
+        })
+    }
     render() {
-        if (!this.state.visible) {
-            return null;
-        } else {
-            return(
-                <div>
-                    <Dialog visible={this.state.visible}
-                            onClose={this.onClose}
-                            style={this.state.style}
-                            closeStyle="icon-19"
-                            footer={
-                                <a className="alert-button" onClick={this.onClose}>确定</a>
-                            }
-                    >
-                        <p className="alert-body">{this.props.msg}</p>
-                    </Dialog>
+        return (
+            <div className="my-ui-alert-wrap" style={this.state.style}>
+                <div className="ui-alert-mask"></div>
+                <div className="my-ui-alert">
+                    <div><span className="ui-dialog-close" onClick={this.onClose}></span></div>
+                    <div className="alert-body">
+                        {this.state.notices}
+                    </div>
+                    <div className="alert-footer">
+                        <button className="footer-btn" onClick={this.onClose}>确定</button>
+                    </div>
                 </div>
-            );
-        }
+            </div>
+
+        );
     }
 }
+
+Alert.newInstance = function newAlertInstance(properties) {
+    const { getContainer, ...props } = properties || {};
+    let div;
+    if (getContainer) {
+        div = getContainer();
+    } else {
+        div = document.createElement('div');
+        document.body.appendChild(div);
+    }
+    const alert = ReactDOM.render(<Alert {...props} />, div);
+    return {
+        notice(alertProps) {
+            alert.add(alertProps);
+        },
+        component: alert,
+        destroy() {
+            ReactDOM.unmountComponentAtNode(div);
+            if (!getContainer) {
+                document.body.removeChild(div);
+            }
+        },
+    };
+};
 
 export default Alert;
