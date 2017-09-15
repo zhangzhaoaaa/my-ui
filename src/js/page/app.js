@@ -1,6 +1,5 @@
 import 'css/components/back2top.scss';
 import 'css/page/wrap/index.scss';
-import 'css/components/loading-box.scss';
 import React, {Component} from 'react';
 import HomePage from 'page/index/index';
 import {

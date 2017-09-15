@@ -3,7 +3,7 @@
  Created by zhangzhao on 2017/9/10.
  Email: zhangzhao@gomeplus.com
  */
-import 'css/components/loading-box.scss';
+import 'css/components/loadingbox.scss';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 

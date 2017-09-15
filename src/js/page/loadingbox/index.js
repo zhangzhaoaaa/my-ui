@@ -1,8 +1,6 @@
 /* css */
-import 'css/page/loadingbox/index.scss';
-
 import React, {Component} from 'react';
-import LoadingBox from './loadingbox';
+import LoadingBox from 'components/LoadingBox';
 
 let loading = LoadingBox.newInstance({});
 class LoadingBoxApp extends Component {
