@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import 'css/page/video_manage/index.scss';
 
-import Back2Top from 'page/back2top/index';
+import Back2Top from 'components/back2top';
 
 export default class VideoManage extends Component{
     constructor(props) {

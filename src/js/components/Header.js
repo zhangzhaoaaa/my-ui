@@ -5,7 +5,6 @@
 import React, {PropTypes} from 'react';
 // import routes from '../router/navigation.jsx';
 import fetch from 'io/fetch';
-import Notification from 'components/Notification';
 
 class Header extends React.Component{
 
@@ -14,7 +13,6 @@ class Header extends React.Component{
 	}
 
 	logout = ()=>{
-		let notification = Notification({});
 	}
 
 	render() {
