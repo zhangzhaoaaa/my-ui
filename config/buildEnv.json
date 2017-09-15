@@ -1,5 +1,3 @@
 {
-  "cdnenv": "/m/vpgc/",
-  "devenv": "/vpgc/",
-  "project": "pgc"
+  "project": "my-ui"
 }
