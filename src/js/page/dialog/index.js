@@ -1,8 +1,6 @@
 /* css */
-import 'css/page/dialog/index.scss';
-
 import React, {Component} from 'react';
-import Dialog from './dialog';
+import Dialog from 'components/Dialog';
 
 class DialogApp extends Component {
     constructor(props) {

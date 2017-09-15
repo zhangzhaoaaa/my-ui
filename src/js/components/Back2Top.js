@@ -1,5 +1,5 @@
 /* css */
-import 'css/page/back2top/index.scss';
+import 'css/components/back2top.scss';
 import React, {Component} from 'react';
 import * as tools from 'util/tools';
 

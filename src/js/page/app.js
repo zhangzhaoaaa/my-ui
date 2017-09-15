@@ -1,4 +1,4 @@
-import 'css/page/back2top/index.scss';
+import 'css/components/back2top.scss';
 import 'css/page/wrap/index.scss';
 import 'css/components/loading-box.scss';
 import React, {Component} from 'react';

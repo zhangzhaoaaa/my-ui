@@ -4,7 +4,7 @@
  Email: zhangzhao@gomeplus.com
  */
 /* css */
-import 'css/page/dialog/index.scss';
+import 'css/components/dialog.scss';
 
 import React, {Component} from 'react';
 
