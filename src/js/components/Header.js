@@ -2,9 +2,7 @@
  * [头部]
  * @return {[type]} [description]
  */
-import React, {PropTypes} from 'react';
-// import routes from '../router/navigation.jsx';
-import fetch from 'io/fetch';
+import React from 'react';
 
 class Header extends React.Component{
 
