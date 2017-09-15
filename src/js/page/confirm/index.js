@@ -1,8 +1,6 @@
 /* css */
-import 'css/page/confirm/index.scss';
-
 import React, {Component} from 'react';
-import Confirm from './confirm';
+import Confirm from 'components/Confirm';
 
 let confirm  = Confirm.newInstance({
 
