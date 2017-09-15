@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import Loadable from 'react-loadable';
+import React from 'react';
 import UIHome from 'page/uihome/index';
 import DialogApp from 'page/dialog/index';
 import NotificationApp from 'page/notification/index';

@@ -1,7 +1,6 @@
 /* css */
 
 import React, {Component} from 'react';
-import 'css/page/video_manage/index.scss';
 
 import Back2Top from 'components/back2top';
 
