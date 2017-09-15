@@ -1,7 +1,6 @@
 /* css */
-import 'css/page/notification/index.scss';
 import React, {Component} from 'react';
-import Notification from './notification';
+import Notification from 'components/Notification';
 
 let notice = Notification.newInstance({});
 class NotificationApp extends Component {

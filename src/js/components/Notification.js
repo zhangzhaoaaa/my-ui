@@ -1,5 +1,5 @@
 /* css */
-import 'css/page/notification/index.scss';
+import 'css/components/notification.scss';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
